@@ -1,0 +1,48 @@
+title: Default
+icon: blank
+
+accept:
+  extension: jpg, png, mp4
+
+fields:
+  img_layout:
+    label: 2-Column
+    type: toggle
+    text: 
+      - "false"
+      - "true"
+    default: false
+    width: 1/2
+  img_size:
+    label: Size
+    type: select
+    default: -m
+    options:
+      -xl: X-Large
+      -l: Large
+      -m: Medium
+      -s: Small
+    help: '(default value will be Medium if unselected)'
+    width: 1/2
+  img_cover:
+    label: Cover
+    type: checkboxes
+    options:
+      home: Home
+      cover: Cover
+    help: '(this image will show on the Home and/or Projects page if selected)'
+    width: 1/2
+  caption:
+    label: Caption
+    type: textarea
+    size: small
+    help: '(optional)'
+    width: 1/2
+  display:
+    label: 'Show/hide'
+    type: toggle
+    text: 
+      - "hide"
+      - "show"
+    default: true
+    width: 1/4
