@@ -1,0 +1,44 @@
+*::selection {
+    color: var(--mu_red);
+    background-color: var(--mu_white_50);
+}
+
+.typing-container {
+    border-bottom: solid .1vw var(--mu_white) !important;
+    transition: opacity .3s ease;
+}
+
+.typing {
+    opacity: 1 !important;
+    transition: opacity .3s ease;
+    pointer-events: all;
+}
+
+a:not(.ext):hover {
+    opacity: .3;
+    transition: opacity .15s ease;
+}
+
+.container {
+    footer {
+        // #mc_embed_signup:hover {
+        //     border-bottom: solid .1vw var(--mu_white_50);
+        //     transition: opacity .3s ease;
+        // }
+
+        #mc_embed_signup form #mc-field-group:hover input {
+            opacity: .3;
+            transition: opacity 0s ease;
+        }
+        
+        #mc_embed_signup form #mc-field-group:hover .progress {
+            width: 0;
+            transition: width .0s ease;
+        }
+
+        #mc-submit:hover input {
+            opacity: .3 !important;
+            transition: opacity .15s ease;
+        }
+    }
+}
