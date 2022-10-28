@@ -11,6 +11,8 @@ Icon
 !/media/index.html
 /content/*
 node_modules
+/assets/css/*.scss
+/assets/css/*.map
 
 # Lock files
 # ---------------
