@@ -186,6 +186,10 @@ body {
   padding: 0.5vw 0px;
   margin-bottom: -1.25vw;
 }
+.container footer #mc_embed_signup form #mce-responses {
+  position: absolute;
+  left: 0;
+}
 .container footer #mc_embed_signup form #mc-submit {
   display: flex;
   height: 5.2vw;
