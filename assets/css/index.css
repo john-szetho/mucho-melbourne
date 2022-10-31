@@ -47,15 +47,15 @@ td, th {
   font-family: "Graphik";
   font-style: normal;
   font-weight: 400;
-  src: url(assets/fonts/Graphik-Regular-Web.woff) format("woff");
-  src: url(assets/fonts/Graphik-Regular-Web.woff2) format("woff2");
+  src: url(/assets/fonts/Graphik-Regular-Web.woff) format("woff");
+  src: url(/assets/fonts/Graphik-Regular-Web.woff2) format("woff2");
 }
 @font-face {
   font-family: "Graphik";
   font-style: bold;
   font-weight: 700;
-  src: url(assets/fonts/Graphik-Medium-Web.woff) format("woff");
-  src: url(assets/fonts/Graphik-Medium-Web.woff2) format("woff2");
+  src: url(/assets/fonts/Graphik-Medium-Web.woff) format("woff");
+  src: url(/assets/fonts/Graphik-Medium-Web.woff2) format("woff2");
 }
 :root {
   --mu_red: #ED3A38;
