@@ -13,6 +13,7 @@ Icon
 node_modules
 /assets/css/*.scss
 /assets/css/*.map
+/assets/css/sass
 
 # Lock files
 # ---------------
