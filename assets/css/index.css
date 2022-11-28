@@ -1,12 +1,12 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 ul {
@@ -21,7 +21,7 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*, ::after, ::before {
   box-sizing: inherit;
 }
 
@@ -43,6 +43,15 @@ td, th {
   padding: 0;
 }
 
+input:-webkit-autofill, input:-webkit-autofill:active, input:-webkit-autofill:focus, input:-webkit-autofill:hover, select:-webkit-autofill, select:-webkit-autofill:active, select:-webkit-autofill:focus, select:-webkit-autofill:hover, textarea:-webkit-autofill, textarea:-webkit-autofill:active, textarea:-webkit-autofill:focus, textarea:-webkit-autofill:hover {
+  -webkit-text-fill-color: var(--mu_white) !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  background-color: var(--mu_red) !important;
+  width: calc(100% + 0.3vw) !important;
+  font-size: 6vw !important;
+  letter-spacing: 0;
+}
+
 @font-face {
   font-family: "Graphik";
   font-style: normal;
@@ -61,6 +70,7 @@ td, th {
   --mu_red: #ED3A38;
   --mu_white: #FFFFFF;
   --mu_white_50: #E6807A;
+  --mu_white_0: #FFFFFF00;
 }
 
 html {
@@ -73,7 +83,8 @@ h1,
 h2,
 h3,
 input,
-a {
+a,
+::placeholder {
   font-family: "Graphik";
   font-style: normal;
   font-weight: 400;
@@ -189,6 +200,10 @@ body {
 .container footer #mc_embed_signup form #mce-responses {
   position: absolute;
   left: 0;
+  font-size: 30%;
+  transform: translateY(-5vw);
+  letter-spacing: -0.038em;
+  opacity: 0.3;
 }
 .container footer #mc_embed_signup form #mc-submit {
   display: flex;
