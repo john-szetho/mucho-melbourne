@@ -1,10 +1,37 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
   font-weight: 400;
 }
@@ -13,7 +40,9 @@ ul {
   list-style: none;
 }
 
-button, input, select {
+button,
+input,
+select {
   margin: 0;
 }
 
@@ -21,11 +50,14 @@ html {
   box-sizing: border-box;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: inherit;
 }
 
-img, video {
+img,
+video {
   height: auto;
   max-width: 100%;
 }
@@ -39,17 +71,35 @@ table {
   border-spacing: 0;
 }
 
-td, th {
+td,
+th {
   padding: 0;
 }
 
-input:-webkit-autofill, input:-webkit-autofill:active, input:-webkit-autofill:focus, input:-webkit-autofill:hover, select:-webkit-autofill, select:-webkit-autofill:active, select:-webkit-autofill:focus, select:-webkit-autofill:hover, textarea:-webkit-autofill, textarea:-webkit-autofill:active, textarea:-webkit-autofill:focus, textarea:-webkit-autofill:hover {
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:active,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:active,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover {
   -webkit-text-fill-color: var(--mu_white) !important;
   transition: background-color 5000s ease-in-out 0s !important;
   background-color: var(--mu_red) !important;
   width: calc(100% + 0.3vw) !important;
   font-size: 6vw !important;
   letter-spacing: 0;
+}
+
+input:-webkit-autofill::first-line,
+input:-internal-autofill-previewed {
+  font-size: 6vw !important;
+  letter-spacing: -0.057em;
 }
 
 @font-face {
