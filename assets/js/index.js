@@ -20,46 +20,6 @@ form.onmouseout = function () {
     }
 }
 
-// form.onmouseover = function () {
-//     if (subscribeInput.value == subscribeInputOG) {
-//         subscribeInput.value = "Enter your email";
-//     }
-// }
-
-// form.onmouseout = function () {
-//     if (subscribeInput.value == "") {
-//         subscribeInput.value = subscribeInputOG;
-
-//         container.classList.remove('typing-container');
-//         subscribeInput.classList.remove('typing');
-//         submitBtn.classList.remove('typing');
-//     } else {
-//         subscribeInput.value = subscribeInputOG;
-//     }
-// }
-
-// form.addEventListener('click', () => {
-//     form.onmouseover = function () {
-//         return false
-//     }
-//     form.onmouseout = function () {
-//         return false
-//     }, { once: true };
-// })
-
-// document.addEventListener('mouseover', () => {
-//     if (subscribeInput.value == "") {
-//         subscribeInput.value = "Subscribe";
-
-//         form.onmouseover = function () {
-//             subscribeInput.value = "Enter your email";
-//         }
-//         form.onmouseout = function () {
-//             subscribeInput.value = subscribeInputOG;
-//         }
-//     }
-// })
-
 
 // Mailchimp sign up script
 // (function ($) {

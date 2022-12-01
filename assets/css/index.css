@@ -76,6 +76,15 @@ th {
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:active,
 input:-webkit-autofill:focus,
@@ -97,9 +106,20 @@ textarea:-webkit-autofill:hover {
 }
 
 input:-webkit-autofill::first-line,
-input:-internal-autofill-previewed {
+input:-internal-autofill-previewed,
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+::-ms-input-placeholder,
+:-moz-placeholder {
   font-size: 6vw !important;
   letter-spacing: -0.057em;
+  -webkit-text-fill-color: var(--mu_white) !important;
+}
+
+::placeholder {
+  color: var(--mu_white) !important;
+  opacity: 1 !important;
 }
 
 @font-face {
@@ -260,6 +280,7 @@ body {
 }
 .container footer #mc_embed_signup form #mc-submit {
   display: flex;
+  justify-content: flex-end;
   height: 5.2vw;
   width: auto;
 }
@@ -322,6 +343,21 @@ a,
   }
   .container header .logo a {
     height: 8.4vw;
+  }
+  .container footer {
+    position: fixed;
+    bottom: 8.5vw;
+    width: calc(100% - 8vw);
+  }
+  .container footer #mc_embed_signup {
+    border-bottom: solid 0.3vw var(--mu_white);
+    padding: 0.8vw 0px;
+  }
+  .container footer #mc_embed_signup form #mc-submit {
+    height: 8.4vw;
+  }
+  .container footer #mc_embed_signup form #mc-field-group .progress {
+    border-bottom: solid 1vw var(--mu_white);
   }
 }
 
