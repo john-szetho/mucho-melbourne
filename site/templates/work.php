@@ -9,7 +9,7 @@
                     <?php
                     $images = $page->images();
                     if($images->isNotEmpty()): ?>
-                        <?php foreach($page->images() as $image): ?>
+                        <?php foreach($page->images()->sortBy('sort') as $image): ?>
                         <div class="swiper-slide">
                             <?= $image ?>
                         </div>
