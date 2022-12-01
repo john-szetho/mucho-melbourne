@@ -1,5 +1,12 @@
 title: Site
+icon: globe
 
 sections:
   pages:
+    headline: Pages
     type: pages
+    layout: cards
+    size: medium
+    template:
+      - work
+    image: icon

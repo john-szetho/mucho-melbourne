@@ -163,7 +163,7 @@ body {
 .container header .logo a {
   height: 5.5vw;
   width: auto;
-  cursor: pointer;
+  cursor: w-resize;
 }
 .container header .logo a.ext {
   cursor: alias;
@@ -171,6 +171,9 @@ body {
 .container header .logo a img {
   width: inherit;
   height: inherit;
+}
+.container header .tagline {
+  cursor: default;
 }
 .container header .tagline h1 {
   display: inline-block;
