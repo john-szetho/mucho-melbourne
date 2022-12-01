@@ -304,4 +304,25 @@ a:not(.ext):hover {
   transition: opacity 0.15s ease;
 }
 
+@media (max-width: 600px) {
+  body,
+h1,
+h2,
+h3,
+input,
+a,
+::placeholder {
+    font-size: 10vw;
+  }
+  .container {
+    padding: 8vw 4vw 8.5vw 4vw;
+  }
+  .container header .tagline h1 {
+    margin-top: 5.1vw;
+  }
+  .container header .logo a {
+    height: 8.4vw;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
