@@ -6,7 +6,7 @@ sections:
     headline: Pages
     type: pages
     layout: cards
-    size: medium
+    size: small
     template:
       - work
     image: icon
