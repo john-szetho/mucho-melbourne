@@ -117,9 +117,10 @@ input:-internal-autofill-previewed,
   -webkit-text-fill-color: var(--mu_white) !important;
 }
 
-::placeholder {
+input::placeholder {
   color: var(--mu_white) !important;
   opacity: 1 !important;
+  overflow: visible;
 }
 
 @font-face {
