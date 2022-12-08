@@ -387,22 +387,27 @@ button,
   main header .logo a {
     height: 8.4vw;
   }
-  main .signup {
+  main .signup,
+main footer {
     position: fixed;
     bottom: 8.5vw;
     width: calc(100% - 8vw);
   }
-  main .signup #mc_embed_signup {
+  main .signup #mc_embed_signup,
+main footer #mc_embed_signup {
     border-bottom: solid 0.3vw var(--mu_white);
     padding: 0.6vw 0px;
   }
-  main .signup #mc_embed_signup form #mc-submit {
+  main .signup #mc_embed_signup form #mc-submit,
+main footer #mc_embed_signup form #mc-submit {
     height: 8.4vw;
   }
-  main .signup #mc_embed_signup form #mc-field-group .progress {
+  main .signup #mc_embed_signup form #mc-field-group .progress,
+main footer #mc_embed_signup form #mc-field-group .progress {
     border-bottom: solid 1.15vw var(--mu_white);
   }
-  main .signup #mc_embed_signup form #mce-responses {
+  main .signup #mc_embed_signup form #mce-responses,
+main footer #mc_embed_signup form #mce-responses {
     transform: translateY(-10vw);
   }
 }
