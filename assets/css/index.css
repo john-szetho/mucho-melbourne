@@ -501,6 +501,7 @@ main .signup #mc-submit:hover input {
   h3,
   input,
   a,
+  button,
   ::-webkit-input-placeholder {
     font-size: 10.3vw;
   }
@@ -510,6 +511,7 @@ main .signup #mc-submit:hover input {
   h3,
   input,
   a,
+  button,
   :-ms-input-placeholder {
     font-size: 10.3vw;
   }
@@ -519,6 +521,7 @@ main .signup #mc-submit:hover input {
   h3,
   input,
   a,
+  button,
   ::-ms-input-placeholder {
     font-size: 10.3vw;
   }
@@ -528,17 +531,18 @@ main .signup #mc-submit:hover input {
   h3,
   input,
   a,
+  button,
   ::placeholder {
     font-size: 10.3vw;
   }
   main {
     padding: 8vw 4vw 8.5vw 4vw;
   }
-  main header .tagline h1 {
-    margin-top: 5vw;
-  }
   main header .logo a {
     height: 8.4vw;
+  }
+  main header .tagline button {
+    margin-top: 5vw;
   }
   main .signup {
     position: fixed;
