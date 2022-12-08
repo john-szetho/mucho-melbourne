@@ -9,7 +9,7 @@ Icon
 
 /media/*
 !/media/index.html
-# /content/*
+/content/*
 node_modules
 /assets/css/*.scss
 /assets/css/*.map
