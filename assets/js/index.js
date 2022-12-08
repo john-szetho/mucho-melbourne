@@ -1,10 +1,10 @@
 // MAILCHIMP SIGNUP FORM
 
-var signupContainer = $('#mc_embed_signup');
-var signupForm = $('#mc-field-group');
-var subscribeInput = $('#mc-field-group input');
-var subscribeInputOG = $('#mc-field-group input').value;
-var submitBtn = $('#mc-submit input');
+var signupContainer = document.querySelector('#mc_embed_signup');
+var form = document.querySelector('#mc-field-group');
+var subscribeInput = document.querySelector('#mc-field-group input');
+var subscribeInputOG = document.querySelector('#mc-field-group input').value;
+var submitBtn = document.querySelector('#mc-submit input');
 
 subscribeInput.onkeydown = function () {
     signupContainer.classList.add('typing-container');
@@ -12,13 +12,14 @@ subscribeInput.onkeydown = function () {
     submitBtn.classList.add('typing');
 }
 
-signupForm.onmouseout = function () {
+form.onmouseout = function () {
     if (subscribeInput.value == subscribeInputOG || value) {
         signupContainer.classList.remove('typing-container');
         subscribeInput.classList.remove('typing');
         submitBtn.classList.remove('typing');
     }
 }
+
 
 // SWIPER JS
 

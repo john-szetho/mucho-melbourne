@@ -218,7 +218,7 @@ main header .tagline button {
   margin-top: 3.2vw;
   margin-right: -0.1vw;
   vertical-align: baseline;
-  cursor: progress;
+  cursor: default;
 }
 main #slideshow {
   display: none;
