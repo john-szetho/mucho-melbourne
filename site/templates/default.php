@@ -1,7 +1,7 @@
 <?php snippet('head') ?>
 <body>
     <main class="<?= $page->uid() ?>">
-        <?php snippet('header_tohome') ?>
+        <?php snippet('headerToHome') ?>
 
         <footer>
             <div class="error">

@@ -3,7 +3,11 @@
     <main class="<?= $page->uid() ?>">
         <?php snippet('header') ?>
 
-        <?php snippet('footer') ?>
+        <div id="slideshow" class="container">
+            <?php snippet('slideshow') ?>
+        </div>
+
+        <?php snippet('signup') ?>
     </main>
 </body>
 <div class="scripts">

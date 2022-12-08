@@ -6,16 +6,7 @@ accept:
 
 fields:
   caption:
-    label: Caption
+    label: Description
     type: textarea
     size: small
-    help: '(optional)'
     width: 1/2
-  display:
-    label: 'Show/hide'
-    type: toggle
-    text: 
-      - "hide"
-      - "show"
-    default: true
-    width: 1/4

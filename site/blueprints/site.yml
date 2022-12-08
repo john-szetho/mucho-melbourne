@@ -8,5 +8,5 @@ sections:
     layout: cards
     size: small
     template:
-      - work
+      - home
     image: icon

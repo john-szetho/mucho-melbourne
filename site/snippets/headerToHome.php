@@ -3,6 +3,6 @@
         <a href="<?= $site->url() ?>"><img src="assets/img/mucho-logo.svg" alt="Mucho"></a>
     </div>
     <div class="tagline">
-        <h1>Melbourne</h1>
+        <button onclick="window.location.reload();">Melbourne</button>
     </div>
 </header>
