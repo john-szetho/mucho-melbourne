@@ -47,15 +47,13 @@ select {
 }
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 img,
@@ -120,30 +118,23 @@ textarea:-webkit-autofill:active,
 textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:hover {
   -webkit-text-fill-color: var(--mu_white) !important;
-  -webkit-transition: background-color 5000s ease-in-out 0s !important;
   transition: background-color 5000s ease-in-out 0s !important;
   background-color: var(--mu_red) !important;
-  width: calc(100% + .3vw) !important;
+  width: calc(100% + 0.3vw) !important;
   font-size: 6vw !important;
   letter-spacing: 0;
 }
 
-input::-webkit-input-placeholder {
-  color: var(--mu_white) !important;
-  opacity: 1 !important;
-  overflow: visible;
-}
-
-input:-ms-input-placeholder {
-  color: var(--mu_white) !important;
-  opacity: 1 !important;
-  overflow: visible;
-}
-
-input::-ms-input-placeholder {
-  color: var(--mu_white) !important;
-  opacity: 1 !important;
-  overflow: visible;
+input:-webkit-autofill::first-line,
+input:-internal-autofill-previewed,
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+::-ms-input-placeholder,
+:-moz-placeholder {
+  font-size: 6vw !important;
+  letter-spacing: -0.057em;
+  -webkit-text-fill-color: var(--mu_white) !important;
 }
 
 input::placeholder {
@@ -153,21 +144,19 @@ input::placeholder {
 }
 
 @font-face {
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-style: normal;
   font-weight: 400;
   src: url(/assets/fonts/Graphik-Regular-Web.woff) format("woff");
   src: url(/assets/fonts/Graphik-Regular-Web.woff2) format("woff2");
 }
-
 @font-face {
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-style: bold;
   font-weight: 700;
   src: url(/assets/fonts/Graphik-Medium-Web.woff) format("woff");
   src: url(/assets/fonts/Graphik-Medium-Web.woff2) format("woff2");
 }
-
 :root {
   --mu_red: #DC3A38;
   --mu_white: #FFFFFF;
@@ -187,64 +176,13 @@ h3,
 input,
 a,
 button,
-::-webkit-input-placeholder {
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 6vw;
-  line-height: 0;
-  letter-spacing: -.057em;
-  color: var(--mu_white);
-}
-
-body,
-h1,
-h2,
-h3,
-input,
-a,
-button,
-:-ms-input-placeholder {
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 6vw;
-  line-height: 0;
-  letter-spacing: -.057em;
-  color: var(--mu_white);
-}
-
-body,
-h1,
-h2,
-h3,
-input,
-a,
-button,
-::-ms-input-placeholder {
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 6vw;
-  line-height: 0;
-  letter-spacing: -.057em;
-  color: var(--mu_white);
-}
-
-body,
-h1,
-h2,
-h3,
-input,
-a,
-button,
 ::placeholder {
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-style: normal;
   font-weight: 400;
   font-size: 6vw;
   line-height: 0;
-  letter-spacing: -.057em;
+  letter-spacing: -0.057em;
   color: var(--mu_white);
 }
 
@@ -253,52 +191,38 @@ body {
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
   padding: 2vw 2vw 2.5vw 2vw;
 }
-
 main header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   z-index: 100;
 }
-
 main header .logo a {
   height: 5.5vw;
   width: auto;
   cursor: w-resize;
 }
-
 main header .logo a.ext {
   cursor: alias;
 }
-
 main header .logo a img {
   width: inherit;
   height: inherit;
 }
-
-main header .tagline button {
+main header button {
   display: inline-block;
-  margin-top: 3.2vw;
-  margin-right: -.1vw;
-  vertical-align: baseline;
   cursor: default;
 }
-
+main header button h1 {
+  position: relative;
+  margin-top: 1.2vw;
+  margin-right: -0.1vw;
+  vertical-align: baseline;
+}
 main #slideshow {
   display: none;
   position: absolute;
@@ -307,39 +231,27 @@ main #slideshow {
   width: 100vw;
   z-index: 1;
 }
-
 main #slideshow .swiper {
   width: 100%;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 main #slideshow .swiper .swiper-slide {
   background-position: center;
   background-size: cover;
 }
-
 main #slideshow .swiper .swiper-slide img,
 main #slideshow .swiper .swiper-slide .null {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 main #slideshow .swiper .swiper-slide .null {
   background-color: var(--mu_red);
 }
-
 main .signup,
 main footer {
   position: fixed;
@@ -347,28 +259,19 @@ main footer {
   width: calc(100% - 4vw);
   z-index: 100;
 }
-
 main .signup #mc_embed_signup,
 main footer #mc_embed_signup {
   border-bottom: solid 0.1vw var(--mu_white);
-  padding: calc(1vw - .05vw) 0px;
+  padding: 0.95vw 0px;
   pointer-events: none;
 }
-
 main .signup #mc_embed_signup form,
 main footer #mc_embed_signup form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
-
 main .signup #mc_embed_signup form #mc-field-group,
 main footer #mc_embed_signup form #mc-field-group {
   display: inline-block;
@@ -376,72 +279,53 @@ main footer #mc_embed_signup form #mc-field-group {
   color: var(--mu_white);
   pointer-events: all;
 }
-
 main .signup #mc_embed_signup form #mc-field-group input,
 main footer #mc_embed_signup form #mc-field-group input {
   width: 73vw;
   border: none;
-  margin-left: -.3vw;
+  margin-left: -0.3vw;
   padding: 0;
   background: none;
   outline: none;
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
-
 main .signup #mc_embed_signup form #mc-field-group .progress,
 main footer #mc_embed_signup form #mc-field-group .progress {
   border-bottom: solid 0.5vw var(--mu_white);
   width: 100%;
-  -webkit-transition: width .3s ease;
-  transition: width .3s ease;
+  transition: width 0.3s ease;
 }
-
 main .signup #mc_embed_signup form #mc-field-group input,
 main .signup #mc_embed_signup form #mc-field-group .progress,
 main footer #mc_embed_signup form #mc-field-group input,
 main footer #mc_embed_signup form #mc-field-group .progress {
-  padding: .5vw 0px;
-  margin-bottom: calc(-1vw - .25vw);
+  padding: 0.5vw 0px;
+  margin-bottom: -1.25vw;
 }
-
 main .signup #mc_embed_signup form #mce-responses,
 main footer #mc_embed_signup form #mce-responses {
   position: absolute;
   left: 0;
   font-size: 30%;
   line-height: 104%;
-  -webkit-transform: translateY(-5vw);
-          transform: translateY(-5vw);
+  transform: translateY(-5vw);
   letter-spacing: -0.038em;
-  opacity: .3;
+  opacity: 0.3;
 }
-
 main .signup #mc_embed_signup form #mc-submit,
 main footer #mc_embed_signup form #mc-submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   height: 5.2vw;
   width: auto;
 }
-
 main .signup #mc_embed_signup form #mc-submit input,
 main footer #mc_embed_signup form #mc-submit input {
-  opacity: .3;
+  opacity: 0.3;
 }
-
 main .signup .error,
 main footer .error {
   padding-bottom: 2.2vw;
-}
-
-*::-moz-selection {
-  color: var(--mu_red);
-  background-color: var(--mu_white_50);
 }
 
 *::selection {
@@ -451,14 +335,12 @@ main footer .error {
 
 .typing-container {
   border-bottom: solid 0.1vw var(--mu_white) !important;
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .typing {
   opacity: 1 !important;
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
   pointer-events: all;
 }
 
@@ -471,68 +353,32 @@ main footer .error {
 }
 
 a:hover {
-  opacity: .3;
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
 }
 
 main .signup #mc_embed_signup form #mc-field-group:hover input {
-  opacity: .3;
-  -webkit-transition: opacity 0s ease;
+  opacity: 0.3;
   transition: opacity 0s ease;
 }
-
 main .signup #mc_embed_signup form #mc-field-group:hover .progress {
   width: 0;
-  -webkit-transition: width 0s ease;
   transition: width 0s ease;
 }
-
 main .signup #mc-submit:hover input {
-  opacity: .3 !important;
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  opacity: 0.3 !important;
+  transition: opacity 0.3s ease;
 }
 
 @media (max-width: 600px) {
   body,
-  h1,
-  h2,
-  h3,
-  input,
-  a,
-  button,
-  ::-webkit-input-placeholder {
-    font-size: 10.3vw;
-  }
-  body,
-  h1,
-  h2,
-  h3,
-  input,
-  a,
-  button,
-  :-ms-input-placeholder {
-    font-size: 10.3vw;
-  }
-  body,
-  h1,
-  h2,
-  h3,
-  input,
-  a,
-  button,
-  ::-ms-input-placeholder {
-    font-size: 10.3vw;
-  }
-  body,
-  h1,
-  h2,
-  h3,
-  input,
-  a,
-  button,
-  ::placeholder {
+h1,
+h2,
+h3,
+input,
+a,
+button,
+::placeholder {
     font-size: 10.3vw;
   }
   main {
@@ -541,9 +387,6 @@ main .signup #mc-submit:hover input {
   main header .logo a {
     height: 8.4vw;
   }
-  main header .tagline button {
-    margin-top: 5vw;
-  }
   main .signup {
     position: fixed;
     bottom: 8.5vw;
@@ -551,7 +394,7 @@ main .signup #mc-submit:hover input {
   }
   main .signup #mc_embed_signup {
     border-bottom: solid 0.3vw var(--mu_white);
-    padding: calc(1vw - .4vw) 0px;
+    padding: 0.6vw 0px;
   }
   main .signup #mc_embed_signup form #mc-submit {
     height: 8.4vw;
@@ -560,8 +403,8 @@ main .signup #mc-submit:hover input {
     border-bottom: solid 1.15vw var(--mu_white);
   }
   main .signup #mc_embed_signup form #mce-responses {
-    -webkit-transform: translateY(-10vw);
-            transform: translateY(-10vw);
+    transform: translateY(-10vw);
   }
 }
+
 /*# sourceMappingURL=index.css.map */
