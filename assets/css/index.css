@@ -181,7 +181,7 @@ button,
   font-style: normal;
   font-weight: 400;
   font-size: 6vw;
-  line-height: 0;
+  line-height: 104%;
   letter-spacing: -0.057em;
   color: var(--mu_white);
 }
@@ -219,7 +219,8 @@ main header button {
 }
 main header button h1 {
   position: relative;
-  margin-top: 1.2vw;
+  line-height: 0;
+  margin-bottom: 0.9vw;
   margin-right: -0.1vw;
   vertical-align: baseline;
 }
@@ -322,10 +323,6 @@ main footer #mc_embed_signup form #mc-submit {
 main .signup #mc_embed_signup form #mc-submit input,
 main footer #mc_embed_signup form #mc-submit input {
   opacity: 0.3;
-}
-main .signup .error,
-main footer .error {
-  padding-bottom: 2.2vw;
 }
 
 *::selection {

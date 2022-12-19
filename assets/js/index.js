@@ -1,7 +1,7 @@
 // MAILCHIMP SIGNUP FORM
 
 var signupContainer = document.querySelector('#mc_embed_signup');
-var form = document.querySelector('#mc-field-group');
+var signupForm = document.querySelector('#mc-field-group');
 var subscribeInput = document.querySelector('#mc-field-group input');
 var subscribeInputOG = document.querySelector('#mc-field-group input').value;
 var submitBtn = document.querySelector('#mc-submit input');
@@ -12,7 +12,7 @@ subscribeInput.onkeydown = function () {
     submitBtn.classList.add('typing');
 }
 
-form.onmouseout = function () {
+signupForm.onmouseout = function () {
     if (subscribeInput.value == subscribeInputOG || value) {
         signupContainer.classList.remove('typing-container');
         subscribeInput.classList.remove('typing');
@@ -33,11 +33,27 @@ var swiper = new Swiper(".swiper", {
     effect: "fade",
     autoplay: {
         delay: autoplayDelay,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
     },
     clickable: true,
     spaceBetween: 60
 });
+
+
+// SWIPER JS TOGGLE
+
+var slideshowBtn = $('slideshowBtn');
+
+function slideshowToggle() {
+    slideshowContainer.fadeToggle();
+
+    setTimeout(() => {
+        slideshowContainer.fadeIn();
+    }, delay);
+};
+
+
+// SWIPER JS SHOW AFTER TIMER
 
 setTimeout(() => {
     slideshowContainer.fadeIn();
@@ -49,8 +65,8 @@ setTimeout(() => {
         effect: "fade",
         autoplay: {
             delay: autoplayDelay,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
         },
         spaceBetween: 60
     });
-  }, delay);
+}, delay);
